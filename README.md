@@ -7,7 +7,7 @@ the [dgrid](https://github.com/SitePen/dgrid) component and [DojoX Charts](https
 
 Real-Time simulated Portfolio data is received from the Lightstreamer Server deployed @ [http://push.lightstreamer.com](http://push.lightstreamer.com)
 
-The demo can be seen online @ [http://www.lightstreamer.com/demo/DojoPortfolioDemo](http://www.lightstreamer.com/demo/DojoPortfolioDemo). To deploy the demo on your
+The demo can be seen online @ [http://www.lightstreamer.com/demo/DojoDemo/portfolio.html](http://www.lightstreamer.com/demo/DojoDemo/portfolio.html). To deploy the demo on your
 own environment follow the below instructions.
 
 Run The Demo
