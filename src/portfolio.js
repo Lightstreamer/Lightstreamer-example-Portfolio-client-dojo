@@ -1,17 +1,15 @@
-
-require(["Lightstreamer/LightstreamerClient","Lightstreamer/StatusWidget","lightstreamer-store/LightstreamerStore",
-          "dojox/charting/Chart","dojox/charting/axis2d/Default","dojox/charting/plot2d/Default","dojox/charting/themes/Claro","dojox/charting/StoreSeries",
-          "dijit/layout/BorderContainer","dijit/Dialog","dijit/form/ToggleButton","dijit/registry",
-          "dijit/form/Button","dijit/form/NumberTextBox","dijit/form/CurrencyTextBox","dojo/number","dijit/form/NumberSpinner","dijit/form/FilteringSelect",
-          "dgrid","dgrid/editor",
-          "dojo/_base/lang","dojo/store/Memory","dojo/store/Observable","dojo/parser","dijit/TitlePane",
-          "dojo/domReady!"], 
-          function(LightstreamerClient,StatusWidget,LightstreamerStore,
-              Chart,axis2dDefault,plot2dDefault,Claro,StoreSeries,
-              BorderContainer,Dialog,ToggleButton,registry,
-              Button,NumberTextBox,CurrencyTextBox,dojoNumber,NumberSpinner,FilteringSelect,
-              Grid,editor,
-              lang,Memory,Observable,parser) {
+require([
+  "Lightstreamer/LightstreamerClient", "Lightstreamer/StatusWidget", "lightstreamer-store/LightstreamerStore",
+  "dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Default",
+  "dojox/charting/themes/Claro", "dojox/charting/StoreSeries",
+  "dijit/layout/BorderContainer", "dijit/Dialog", "dijit/form/ToggleButton", "dijit/registry",
+  "dijit/form/Button", "dijit/form/NumberTextBox", "dijit/form/CurrencyTextBox", "dojo/number",
+  "dijit/form/NumberSpinner", "dijit/form/FilteringSelect",
+  "dgrid","dgrid/editor", "dojo/_base/lang", "dojo/store/Memory", "dojo/store/Observable", "dojo/parser",
+  "dijit/TitlePane", "dojo/_base/array" "dojo/domReady!"
+], function(LightstreamerClient, StatusWidget, LightstreamerStore, Chart, axis2dDefault, plot2dDefault, Claro,
+  StoreSeries, BorderContainer, Dialog, ToggleButton, registry, Button, NumberTextBox, CurrencyTextBox, 
+  dojoNumber, NumberSpinner, FilteringSelect, Grid, editor, lang, Memory, Observable, parser, TitlePane, arrayUtil){
 
   //  Formatters for various parts of the UI
   formatters = {
@@ -75,7 +73,7 @@ require(["Lightstreamer/LightstreamerClient","Lightstreamer/StatusWidget","light
       lowTime = startTime;
       highTime = lowTime + LIMIT;
       
-      chart.addAxis("x", dojo.mixin(dojo.clone(config.xAxis), titleInfo, { min: lowTime, max: highTime, from: lowTime, to: highTime}));
+      chart.addAxis("x", lang.mixin(lang.clone(config.xAxis), titleInfo, { min: lowTime, max: highTime, from: lowTime, to: highTime}));
       
       //delete "obsolete" points
       var remIfLowerThan = lowTime-1000;
@@ -149,7 +147,7 @@ require(["Lightstreamer/LightstreamerClient","Lightstreamer/StatusWidget","light
       }
 
       //  ok, we checked this one, so let's make sure the others are unchecked.
-      dojo.forEach(config.plotButtons, function(b){
+      arrayUtil.forEach(config.plotButtons, function(b){
         if("button" + b == id) { 
           return; 
         }
@@ -278,7 +276,7 @@ require(["Lightstreamer/LightstreamerClient","Lightstreamer/StatusWidget","light
   });
   
   //  remove the stroke around the chart itself.
-  dojox.charting.themes.Claro.chart.stroke = null;
+  Claro.chart.stroke = null;
 
   
   // let dojo parse the html
@@ -307,7 +305,7 @@ require(["Lightstreamer/LightstreamerClient","Lightstreamer/StatusWidget","light
   
   
 // initiate stock select
-  var sel = new dijit.form.FilteringSelect({
+  var sel = new FilteringSelect({
                 name: "stockSelect",
                 value: "",
                 placeHolder: "Select a Stock ... ",
@@ -409,29 +407,27 @@ require(["Lightstreamer/LightstreamerClient","Lightstreamer/StatusWidget","light
   var prgChart = 0;
   var chartStore = Observable(new Memory({}));
 
-  var chart = new dojox.charting.Chart("chartArea").
-  setTheme(dojox.charting.themes.Claro).
+  var chart = new Chart("chartArea").
+  setTheme(Claro).
   addAxis("y", {vertical: true, fixLower: "minor", fixUpper: "minor", includeZero: false, min: 90, max: 110 }).
   addPlot("default", {type: "Default", lines: true, markers: true, tension: "X" }).
-  addSeries("summa", new dojox.charting.StoreSeries(chartStore, {},   { x: "x", y: "y" })).
+  addSeries("summa", new StoreSeries(chartStore, {},   { x: "x", y: "y" })).
   render();
 
   
   //set up the chart resize
-  var cp = dijit.byId("chartArea");
-  dojo.connect(cp, "resize", function(){
+  var cp = registry.byId("chartArea");
+  cp.on("resize", function(){
     chart.resize();
   });
   
 
-  var portfolioSumma = dijit.byId("PortfolioSumma");
-  var inputQty = dijit.byId("orderQty");
+  var portfolioSumma = registry.byId("PortfolioSumma");
+  var inputQty = registry.byId("orderQty");
   
-  var btnBuy = dijit.byId("buttonBuy");
-  btnBuy.onClick = handlers.sndOrderBuy;
+  var btnBuy = registry.byId("buttonBuy");
+  btnBuy.on("click", lang.hitch(handlers, "sndOrderBuy"));
   
-  var btnSell = dijit.byId("buttonSell");
-  btnSell.onClick = handlers.sndOrderSell;
-    
-
+  var btnSell = registry.byId("buttonSell");
+  btnSell.on("click", lang.hitch(handlers, "sndOrderSell"));
 });
