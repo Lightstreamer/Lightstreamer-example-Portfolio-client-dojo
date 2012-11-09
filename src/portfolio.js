@@ -6,7 +6,7 @@ require([
   "dijit/form/Button", "dijit/form/NumberTextBox", "dijit/form/CurrencyTextBox", "dojo/number",
   "dijit/form/NumberSpinner", "dijit/form/FilteringSelect",
   "dgrid","dgrid/editor", "dojo/_base/lang", "dojo/store/Memory", "dojo/store/Observable", "dojo/parser",
-  "dijit/TitlePane", "dojo/_base/array" "dojo/domReady!"
+  "dijit/TitlePane", "dojo/_base/array", "dojo/domReady!"
 ], function(LightstreamerClient, StatusWidget, LightstreamerStore, Chart, axis2dDefault, plot2dDefault, Claro,
   StoreSeries, BorderContainer, Dialog, ToggleButton, registry, Button, NumberTextBox, CurrencyTextBox, 
   dojoNumber, NumberSpinner, FilteringSelect, Grid, editor, lang, Memory, Observable, parser, TitlePane, arrayUtil){
