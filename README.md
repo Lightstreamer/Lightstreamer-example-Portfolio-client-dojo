@@ -88,6 +88,12 @@ As an example, to connect to a local server listening on port 8080 use
     var lsClient = new LightstreamerClient("http://localhost:8080","DEMO");
 ```
 
+Known Bugs
+----------
+
+*  If the user inputs any value in the dgrid and an update for that rows arrives from the store, the user's value is overwritten.
+*  If the user inputs any value and then presses + (to buy) or - (to sell) immediately after, the quantity field appears still empty and the first click fails.
+
 See Also
 --------
 
