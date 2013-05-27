@@ -98,8 +98,8 @@ See Also
 --------
 
 * [LightstreamerStore for Dojo](https://github.com/Weswit/dojo-lightstreamer-store)
-* [Lightstreamer Stock-List Demo Client for Dojo](https://github.com/Weswit/Lightstreamer-example-StockList-client-dojo)
-* [Lightstreamer Stock-List Demo Adapter](https://github.com/Weswit/Lightstreamer-example-StockList-adapter-java)
+* [Lightstreamer StockList Demo Client for Dojo](https://github.com/Weswit/Lightstreamer-example-StockList-client-dojo)
+* [Lightstreamer StockList Demo Adapter](https://github.com/Weswit/Lightstreamer-example-StockList-adapter-java)
 * [Lightstreamer Portfolio Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java)
 
 Lightstreamer Compatibility Notes
