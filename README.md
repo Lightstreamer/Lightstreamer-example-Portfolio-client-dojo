@@ -1,23 +1,34 @@
-Lightstreamer Portfolio Demo Client for Dojo
-===============================================
+# Lightstreamer Portfolio Demo Client for Dojo #
 
-A simple portfolio demo application showing integration between the Dojo Toolkit and the Lightstreamer JS Client.
-The demo shows how to use the Lightstreamer JS Client library, the [lightstreamer-store](https://github.com/Weswit/dojo-lightstreamer-store),
-the [dgrid](https://github.com/SitePen/dgrid) component and [DojoX Charts](https://github.com/dojo/dojox) together.
+A simple portfolio demo application showing integration between the Dojo Toolkit and the Lightstreamer JavaScript Client library.
 
-Real-Time simulated Portfolio data is received from the Lightstreamer Server deployed @ [http://push.lightstreamer.com](http://push.lightstreamer.com)
+## Lightstreamer :: Dojo Toolkit :: Portfolio Demo ##
 
-The demo can be seen online @ [http://www.lightstreamer.com/demo/DojoDemo/portfolio.html](http://www.lightstreamer.com/demo/DojoDemo/portfolio.html). To deploy the demo on your
-own environment follow the below instructions.
+<table>
+  <tr>
+    <td style="text-align: left">
+      &nbsp;<a href="http://demos.lightstreamer.com/DojoDemo/portfolio.html" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_dojo_portfolio.png"></a>&nbsp;
+      
+    </td>
+    <td>
+      &nbsp;An online demonstration is hosted on our servers at:<br>
+      &nbsp;<a href="http://demos.lightstreamer.com/DojoDemo/portfolio.html" target="_blank">http://demos.lightstreamer.com/DojoDemo/portfolio.html</a>
+    </td>
+  </tr>
+</table>
 
-Run The Demo
-------------
+The demo shows how to use the Lightstreamer JavaScript Client library, the [lightstreamer-store](https://github.com/Weswit/dojo-lightstreamer-store), the [dgrid](https://github.com/SitePen/dgrid) component and [DojoX Charts](https://github.com/dojo/dojox) together.
+
+Real-Time simulated Portfolio data is received from the Lightstreamer Server deployed @ [http://push.lightstreamer.com](http://push.lightstreamer.com).<br>
+To deploy the demo on your own environment follow the below instructions.
+
+# Deploy #
 
 Before you can run the demo some dependencies need to be solved:
 
--  Get the lightstreamer_namespace.js file from the [Lightstreamer 5 Colosseo distribution](http://www.lightstreamer.com/download) 
+-  Get the lightstreamer_namespace.js file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) 
    and put it in the src folder of the demo. Alternatively you can build a lightstreamer_namespace.js file from the 
-   [online generator](http://www.lightstreamer.com/distros/Lightstreamer_Allegro-Presto-Vivace_5_0_Colosseo_20120803/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html).
+   [online generator](http://www.lightstreamer.com/distros/Lightstreamer_Allegro-Presto-Vivace_5_1_1_Colosseo_20130305/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html).
    In that case be sure to include the LightstreamerClient, Subscription and StatusWidget modules and to use the "AMD with namespaced names" version.
 -  Download [the Dojo Toolkit](http://download.dojotoolkit.org) and copy the dojox folder from the package to the src folder of the demo. The demo requires the Dojo Toolkit v.1.8 or higher.
 -  Using the [CommonJS Package Manager](https://github.com/kriszyp/cpm) install dgrid, dijit and lightstreamer-store in the src folder;
@@ -28,11 +39,11 @@ Before you can run the demo some dependencies need to be solved:
         
 The demo is now ready to be launched: navigate to src/index.html and enjoy.        
         
-Deploy The Demo
----------------
+Once the demo is working in your environment it is time to deploy it on a web server. 
 
-Once the demo is working in your environment it is time to deploy it on a web server. Before doing so it is suggested to compress the dojo/dojox/dijit files in a single js source file to
-minimize startup times:
+## Dojo Build ##
+
+Before doing so it is suggested to compress the dojo/dojox/dijit files in a single js source file to minimize startup times:
 
 Head for the [Dojo Web Builder](http://build.dojotoolkit.org/) and select the following packages:
 
@@ -64,8 +75,7 @@ Head for the [Dojo Web Builder](http://build.dojotoolkit.org/) and select the fo
 
 Then click the "build" button and wait. Once the builder is done a zip file will be dowloaded; copy the files/folders from the archive in the src/dojo foloder and reload the demo. 
 
-Point to your Lightstreamer
----------------------------
+## Point to your Lightstreamer ##
 
 The demo currently connects to an online Lightstreamer demo server to get the stock data. It is possible to change this setting making the demo point to a different server. Obviously in this 
 case the DEMO adapter needs to be installed on the tagert server (currently such adapter is installed by default).
@@ -88,22 +98,30 @@ As an example, to connect to a local server listening on port 8080 use
     var lsClient = new LightstreamerClient("http://localhost:8080","DEMO");
 ```
 
-Known Bugs
-----------
+## Known Bugs ##
 
 *  If the user inputs any value in the dgrid and an update for that rows arrives from the store, the user's value is overwritten.
 *  If the user inputs any value and then presses + (to buy) or - (to sell) immediately after, the quantity field appears still empty and the first click fails.
 
-See Also
---------
 
-* [LightstreamerStore for Dojo](https://github.com/Weswit/dojo-lightstreamer-store)
-* [Lightstreamer StockList Demo Client for Dojo](https://github.com/Weswit/Lightstreamer-example-StockList-client-dojo)
-* [Lightstreamer StockList Demo Adapter](https://github.com/Weswit/Lightstreamer-example-StockList-adapter-java)
+# See Also #
+
+## Lightstreamer Adapters needed by this demo client ##
+
+* [Lightstreamer StockList Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
 * [Lightstreamer Portfolio Demo Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java)
 
-Lightstreamer Compatibility Notes
----------------------------------
+## Similar demo clients that may interest you ##
+
+* [Lightstreamer StockList Demo Client for Dojo](https://github.com/Weswit/Lightstreamer-example-StockList-client-dojo)
+* [Lightstreamer Portfolio Demo Client for JavaScript](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-javascript)
+* [Lightstreamer Portfolio Demo Client for Adobe Flex SDK](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-flex)
+
+## Related projects ##
+
+* [LightstreamerStore for Dojo](https://github.com/Weswit/dojo-lightstreamer-store)
+
+# Lightstreamer Compatibility Notes #
 
 * Compatible with Lightstreamer JavaScript Client library version 6.0 or newer.
 * Compatible with Dojo Toolkit v.1.8 or newer.
