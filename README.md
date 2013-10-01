@@ -7,7 +7,7 @@ A simple portfolio demo application showing integration between the Dojo Toolkit
 <table>
   <tr>
     <td style="text-align: left">
-      &nbsp;<a href="http://demos.lightstreamer.com/DojoDemo/portfolio.html" target="_blank"><img src="http://www.lightstreamer.com/img/demo/screen_dojo_portfolio.png"></a>&nbsp;
+      &nbsp;<a href="http://demos.lightstreamer.com/DojoDemo/portfolio.html" target="_blank"><img src="screen_dojo_portfolio.png"></a>&nbsp;
       
     </td>
     <td>
