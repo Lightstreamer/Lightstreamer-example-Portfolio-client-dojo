@@ -1,4 +1,4 @@
-# Lightstreamer - Portfolio Demo - Dojo Toolkit Client #
+# Lightstreamer - Portfolio Demo - HTML (Dojo Toolkit) Client #
 
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-dojo -->
 
