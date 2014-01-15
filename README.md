@@ -2,20 +2,10 @@
 
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-dojo -->
 
-A simple portfolio demo application showing integration between the Dojo Toolkit and the Lightstreamer JavaScript Client library.
+A simple portfolio demo application showing integration between the <b>Dojo Toolkit</b> and the [Lightstreamer JavaScript Client library](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html).
 
-<table>
-  <tr>
-    <td style="text-align: left">
-      &nbsp;<a href="http://demos.lightstreamer.com/DojoDemo/portfolio.html" target="_blank"><img src="screen_dojo_portfolio.png"></a>&nbsp;
-      
-    </td>
-    <td>
-      &nbsp;An online demonstration is hosted on our servers at:<br>
-      &nbsp;<a href="http://demos.lightstreamer.com/DojoDemo/portfolio.html" target="_blank">http://demos.lightstreamer.com/DojoDemo/portfolio.html</a>
-    </td>
-  </tr>
-</table>
+[![screenshot](screen_dojo_portfolio_large.png)](http://demos.lightstreamer.com/DojoDemo/portfolio.html/)<br>
+An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/DojoDemo/portfolio.html/](http://demos.lightstreamer.com/DojoDemo/portfolio.html/)<br>
 
 The demo shows how to use the Lightstreamer JavaScript Client library, the [lightstreamer-store](https://github.com/Weswit/dojo-lightstreamer-store), the [dgrid](https://github.com/SitePen/dgrid) component and [DojoX Charts](https://github.com/dojo/dojox) together.
 
@@ -76,7 +66,7 @@ Head for the [Dojo Web Builder](http://build.dojotoolkit.org/) and select the fo
 
 Then click the "build" button and wait. Once the builder is done a zip file will be dowloaded; copy the files/folders from the archive in the src/dojo foloder and reload the demo. 
 
-## Point to your Lightstreamer ##
+## Point to Your Lightstreamer ##
 
 The demo currently connects to an online Lightstreamer demo server to get the stock data. It is possible to change this setting making the demo point to a different server. Obviously in this 
 case the DEMO adapter needs to be installed on the tagert server (currently such adapter is installed by default).
@@ -107,7 +97,7 @@ As an example, to connect to a local server listening on port 8080 use
 
 # See Also #
 
-## Lightstreamer Adapters needed by this demo client ##
+## Lightstreamer Adapters Needed by This Demo Client ##
 
 <!-- START RELATED_ENTRIES -->
 * [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
@@ -115,14 +105,11 @@ As an example, to connect to a local server listening on port 8080 use
 
 <!-- END RELATED_ENTRIES -->
 
-## Similar demo clients that may interest you ##
+## Related Projects ##
 
 * [Lightstreamer - StockList Demo - Dojo Toolkit Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-dojo)
 * [Lightstreamer - Portfolio Demos - HTML Clients](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-javascript)
 * [Lightstreamer - Portfolio Demo - Flex Client](https://github.com/Weswit/Lightstreamer-example-Portfolio-client-flex)
-
-## Related projects ##
-
 * [LightstreamerStore for Dojo](https://github.com/Weswit/dojo-lightstreamer-store)
 
 # Lightstreamer Compatibility Notes #
