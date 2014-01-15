@@ -4,8 +4,8 @@
 
 A simple portfolio demo application showing integration between the <b>Dojo Toolkit</b> and the [Lightstreamer JavaScript Client library](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html).
 
-[![screenshot](screen_dojo_portfolio_large.png)](http://demos.lightstreamer.com/DojoDemo/portfolio.html/)<br>
-An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/DojoDemo/portfolio.html/](http://demos.lightstreamer.com/DojoDemo/portfolio.html/)<br>
+[![screenshot](screen_dojo_portfolio_large.png)](http://demos.lightstreamer.com/DojoDemo/portfolio.html)<br>
+An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/DojoDemo/portfolio.html](http://demos.lightstreamer.com/DojoDemo/portfolio.html)<br>
 
 The demo shows how to use the Lightstreamer JavaScript Client library, the [lightstreamer-store](https://github.com/Weswit/dojo-lightstreamer-store), the [dgrid](https://github.com/SitePen/dgrid) component and [DojoX Charts](https://github.com/dojo/dojox) together.
 
