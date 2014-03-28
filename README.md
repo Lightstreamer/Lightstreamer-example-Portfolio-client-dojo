@@ -28,7 +28,7 @@ Before you can run the demo some dependencies need to be solved:
         cpm install dijit
         cpm install lightstreamer-store
         
-The demo is now ready to be launched: navigate to src/index.html and enjoy.        
+The demo is now ready to be launched: navigate to src/portfolio.html and enjoy.        
         
 Once the demo is working in your environment it is time to deploy it on a web server. 
 
@@ -70,10 +70,10 @@ Then click the "build" button and wait. Once the builder is done a zip file will
 
 The demo currently connects to an online Lightstreamer demo server to get the stock data. It is possible to change this setting making the demo point to a different server. Obviously in this 
 case the DEMO adapter needs to be installed on the tagert server (currently such adapter is installed by default).
-To change the server edit the index.js file and substitute the following line
+To change the server edit the js/lsClient.js file and substitute the following line
 
 ```js
-    var lsClient = new LightstreamerClient("http://push.lightstreamer.com","DEMO");
+    var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"DEMO");
 ```
 
 with
