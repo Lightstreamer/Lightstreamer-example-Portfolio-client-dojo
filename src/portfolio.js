@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 require([
-  "Lightstreamer/LightstreamerClient", "Lightstreamer/StatusWidget", "lightstreamer-store/LightstreamerStore",
+  "js/lsClient", "lightstreamer-store/LightstreamerStore",
   "dojox/charting/Chart", "dojox/charting/axis2d/Default", "dojox/charting/plot2d/Default",
   "dojox/charting/themes/Claro", "dojox/charting/StoreSeries",
   "dijit/layout/BorderContainer", "dijit/Dialog", "dijit/form/ToggleButton", "dijit/registry",
@@ -23,7 +23,7 @@ require([
   "dijit/form/NumberSpinner", "dijit/form/FilteringSelect",
   "dgrid","dgrid/editor", "dojo/_base/lang", "dojo/store/Memory", "dojo/store/Observable", "dojo/parser",
   "dijit/TitlePane", "dojo/_base/array", "dojo/domReady!"
-], function(LightstreamerClient, StatusWidget, LightstreamerStore, Chart, axis2dDefault, plot2dDefault, Claro,
+], function(lsClient, LightstreamerStore, Chart, axis2dDefault, plot2dDefault, Claro,
   StoreSeries, BorderContainer, Dialog, ToggleButton, registry, Button, NumberTextBox, CurrencyTextBox, 
   dojoNumber, NumberSpinner, FilteringSelect, Grid, editor, lang, Memory, Observable, parser, TitlePane, arrayUtil){
 
@@ -301,13 +301,7 @@ require([
   
   
 //HERE starts the interesting stuff  
-  
-// initiate the Lightstreamer connection
-  var lsClient = new LightstreamerClient("http://push.lightstreamer.com","DEMO");
-  lsClient.connectionSharing.enableSharing("DojoDemosCommonConnection", "ATTACH", "CREATE");
-  lsClient.addListener(new StatusWidget("left", "0px", true));
-  lsClient.connect();  
-  
+
 // initiate the LightstreamerStore
   var portfolioStore = new LightstreamerStore(lsClient, {
     items: [config.portfolioId], 
