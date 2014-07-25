@@ -11,11 +11,12 @@ This project includes a web client front-end for the [Lightstreamer - Portfolio 
 
 ###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/DojoDemo/portfolio.html)
 
+Real-Time simulated Portfolio data is received from the Lightstreamer Server deployed at [http://push.lightstreamer.com](http://push.lightstreamer.com).
+
 ## Details
 
 The demo shows how to use the [Lightstreamer JavaScript Client library](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html), the [LightstreamerStore 1.0 for Dojo](https://github.com/Weswit/dojo-lightstreamer-store), the [dgrid](https://github.com/SitePen/dgrid) component and [DojoX Charts](https://github.com/dojo/dojox) together.
 
-Real-Time simulated Portfolio data is received from the Lightstreamer Server deployed at [http://push.lightstreamer.com](http://push.lightstreamer.com).
 <!-- END DESCRIPTION lightstreamer-example-portfolio-client-dojo -->
 
 ### Known Bugs
