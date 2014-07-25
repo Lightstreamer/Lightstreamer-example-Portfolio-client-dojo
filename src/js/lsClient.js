@@ -17,7 +17,7 @@ define(["Lightstreamer/LightstreamerClient", "Lightstreamer/StatusWidget"],funct
   var protocolToUse = document.location.protocol != "file:" ? document.location.protocol : "http:";
   var portToUse = document.location.protocol == "https:" ? "443" : "8080";
   // initiate the Lightstreamer connection
-  var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"DEMO");
+  var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"FULLPORTFOLIODEMO");
   lsClient.connectionSharing.enableSharing("DojoDemosCommonConnection", "ATTACH", "CREATE");
   lsClient.addListener(new StatusWidget("left", "0px", true));
   lsClient.connect();
