@@ -3,7 +3,7 @@
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-dojo -->
 The *Portfolio Demo* simulate a portfolio management: it shows a list of stocks included in a portfolio and provide a simple order entry form. Changes to portfolio contents, due to new orders, are displayed on the page in real time. In addition to that, the *Full Version of the Portfolio Demo* shows for each stock in the portfolio also the current price, updated in real time from a market data feed.
 
-This project includes a web client front-end for the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java), showing the integration between the **Dojo Toolkit** and the [Lightstreamer JavaScript Client library](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html).
+This project includes a web client front-end for the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java), showing the integration between the [Dojo Toolkit](http://download.dojotoolkit.org/) and the [Lightstreamer JavaScript Client](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html) library.
 
 ## Live Demo
 
@@ -15,7 +15,7 @@ Real-Time simulated Portfolio data is received from the Lightstreamer Server dep
 
 ## Details
 
-The demo shows how to use the [Lightstreamer JavaScript Client library](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html), the [LightstreamerStore 1.0 for Dojo](https://github.com/Weswit/dojo-lightstreamer-store), the [dgrid](https://github.com/SitePen/dgrid) component and [DojoX Charts](https://github.com/dojo/dojox) together.
+The demo shows how to use: the [Lightstreamer JavaScript Client](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html) library, the [Dojo Toolkit](http://download.dojotoolkit.org/), the [LightstreamerStore 1.0 for Dojo](https://github.com/Weswit/dojo-lightstreamer-store) integration package, the [dgrid](https://github.com/SitePen/dgrid) widget library and the [DojoX Charts](https://github.com/dojo/dojox) library, together.
 
 <!-- END DESCRIPTION lightstreamer-example-portfolio-client-dojo -->
 
