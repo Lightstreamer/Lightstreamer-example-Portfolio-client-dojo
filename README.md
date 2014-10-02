@@ -1,7 +1,7 @@
 # Lightstreamer - Portfolio Demo - HTML (Dojo Toolkit) Client
 
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-dojo -->
-The *Portfolio Demo* simulate a portfolio management: it shows a list of stocks included in a portfolio and provide a simple order entry form. Changes to portfolio contents, due to new orders, are displayed on the page in real time. In addition to that, the *Full Version of the Portfolio Demo* shows for each stock in the portfolio also the current price, updated in real time from a market data feed.
+The *Portfolio Demo* simulates a portfolio management: it shows a list of stocks included in a portfolio and provide a simple order entry form. Changes to portfolio contents, as a result of new orders, are displayed on the page in real-time. In addition to that, the *Full Version of the Portfolio Demo* also shows, for each stock in the portfolio, the current price, updated in real-time from a market data feed.
 
 This project includes a web client front-end for the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java), showing the integration between the [Dojo Toolkit](http://download.dojotoolkit.org/) and the [Lightstreamer JavaScript Client](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html) library.
 
@@ -21,24 +21,24 @@ The demo shows how to use: the [Lightstreamer JavaScript Client](http://www.ligh
 
 ### Known Bugs
 
-*  If the user inputs any value in the dgrid and an update for that rows arrives from the store, the user's value is overwritten.
-*  If the user inputs any value and then presses + (to buy) or - (to sell) immediately after, the quantity field appears still empty and the first click fails.
+* If the user inputs any value in the dgrid and an update for that rows arrives from the store, the user's value is overwritten.
+* If the user inputs any value and then presses + (to buy) or - (to sell) immediately after, the quantity field appears still empty and the first click fails.
 
 
 ## Install
 If you want to install a version of this demo, pointing to your local Lightstreamer Server instance, follow the steps below.
 
-* The the *Dojo Toolkit Portfolio Demo*, needs both the *PORTFOLIO_ADAPTER*, from the *Portfolio Demo*, and the *QUOTE_ADAPTER*, from the *Stock-List Demo* (see [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-StockList-adapter-java)). As a prerequisite, the full version of the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please follow the instruction in [Install the Portfolio Demo](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java#install-the-portfolio-demo) to install it.
+* The the *Dojo Toolkit Portfolio Demo*, needs both the *PORTFOLIO_ADAPTER*, from the *Portfolio Demo*, and the *QUOTE_ADAPTER*, from the *Stock-List Demo* (see [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-StockList-adapter-java)). As a prerequisite, the full version of the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please follow the instructions in [Install the Portfolio Demo](https://github.com/Weswit/Lightstreamer-example-Portfolio-adapter-java#install-the-portfolio-demo) to install it.
 * Download this project.
-* Get the `lightstreamer_namespace.js` file from the `DOCS-SDKs\sdk_client_javascript\alternative_libs` folder of the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) and put it in the `src` folder of the project. Alternatively you can build a `lightstreamer_namespace.js` file from the [online generator](http://www.lightstreamer.com/distros/Lightstreamer_Allegro-Presto-Vivace_5_1_1_Colosseo_20140310/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html). In that case be sure to include the LightstreamerClient, Subscription and StatusWidget modules and to use the "AMD with namespaced names" version.
+* Get the `lightstreamer_namespace.js` file from the `DOCS-SDKs\sdk_client_javascript\alternative_libs` folder of the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) and put it in the `src` folder of the project. Alternatively, you can build a `lightstreamer_namespace.js` file from the [online generator](http://www.lightstreamer.com/distros/Lightstreamer_Allegro-Presto-Vivace_5_1_1_Colosseo_20140310/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html). In that case, be sure to include the LightstreamerClient, Subscription, and StatusWidget modules and to use the "AMD with namespaced names" version.
 * Download the [Dojo Toolkit](http://download.dojotoolkit.org) and copy the `dojox` folder from the package to the `src` folder of the project. The demo requires the Dojo Toolkit v.1.8 or higher.
-* Using the [CommonJS Package Manager](https://github.com/kriszyp/cpm) install dgrid, dijit and lightstreamer-store in the `src` folder of the project; dependencies for these packages will be automatically resolved by the cpm process:
+* Using the [CommonJS Package Manager](https://github.com/kriszyp/cpm) install dgrid, dijit, and lightstreamer-store in the `src` folder of the project; dependencies for these packages will be automatically resolved by the cpm process:
     * `> cpm install dgrid 0.3.8`
     * `> cpm install dijit`
     * `> cpm install lightstreamer-store`
 * Deploy this demo on the Lightstreamer Server (used as Web server) or in any external Web Server. If you choose the former:
-    *  create the folders `<LS_HOME>/pages/DojoPortfolio` and copy here the contents of the `/src` folder of this project.
-    *  The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine. If you need to target a different Lightstreamer server, please edit `js/lsClient.js` and change accordingly the line:<BR/>
+    * create the folders `<LS_HOME>/pages/DojoPortfolio` and copy here the contents of the `/src` folder of this project.
+    * The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters, and this client are launched on the same machine. If you need to target a different Lightstreamer server, please edit `js/lsClient.js` and change accordingly the line:<BR/>
 `var lsClient = new LightstreamerClient(protocolToUse+"//localhost:"+portToUse,"FULLPORTFOLIODEMO");`
 * Open your browser and point it to: [http://localhost:8080/DojoPortfolio/portfolio.html](http://localhost:8080/DojoPortfolio/portfolio.html)
 
@@ -75,7 +75,7 @@ Head for the [Dojo Web Builder](http://build.dojotoolkit.org/) and select the fo
 -  dijit.form.Button
 -  dijit.TitlePane
 
-Then click the "build" button and wait. Once the builder is done a zip file will be dowloaded; copy the `files/folders` from the archive in the `src/dojo` foloder and reload the demo. 
+Then click the "build" button and wait. Once the builder is done, a zip file will be dowloaded; copy the `files/folders` from the archive in the `src/dojo` foloder and reload the demo. 
 
 
 ## See Also
