@@ -3,7 +3,7 @@
 <!-- START DESCRIPTION lightstreamer-example-portfolio-client-dojo -->
 The *Portfolio Demo* simulates a portfolio management: it shows a list of stocks included in a portfolio and provide a simple order entry form. Changes to portfolio contents, as a result of new orders, are displayed on the page in real-time. In addition to that, the *Full Version of the Portfolio Demo* also shows, for each stock in the portfolio, the current price, updated in real-time from a market data feed.
 
-This project includes a web client front-end for the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java), showing the integration between the [Dojo Toolkit](http://download.dojotoolkit.org/) and the [Lightstreamer JavaScript Client](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html) library.
+This project includes a web client front-end for the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java), showing the integration between the [Dojo Toolkit](http://download.dojotoolkit.org/) and the [Lightstreamer JavaScript Client](https://lightstreamer.com/api/ls-web-client/latest/index.html) library.
 
 ## Live Demo
 
@@ -15,7 +15,7 @@ This project includes a web client front-end for the [Lightstreamer - Portfolio 
 
 ## Details
 
-The demo shows how to use: the [Lightstreamer JavaScript Client](http://www.lightstreamer.com/docs/client_javascript_uni_api/index.html) library, the [Dojo Toolkit](http://download.dojotoolkit.org/), the [LightstreamerStore 1.0 for Dojo](https://github.com/Lightstreamer/dojo-lightstreamer-store) integration package, the [dgrid](https://github.com/SitePen/dgrid) widget library and the [DojoX Charts](https://github.com/dojo/dojox) library, together.
+The demo shows how to use: the [Lightstreamer JavaScript Client](https://lightstreamer.com/api/ls-web-client/latest/index.html) library, the [Dojo Toolkit](http://download.dojotoolkit.org/), the [LightstreamerStore 1.0 for Dojo](https://github.com/Lightstreamer/dojo-lightstreamer-store) integration package, the [dgrid](https://github.com/SitePen/dgrid) widget library and the [DojoX Charts](https://github.com/dojo/dojox) library, together.
 
 <!-- END DESCRIPTION lightstreamer-example-portfolio-client-dojo -->
 
@@ -30,8 +30,9 @@ If you want to install a version of this demo, pointing to your local Lightstrea
 
 * The the *Dojo Toolkit Portfolio Demo*, needs both the *PORTFOLIO_ADAPTER*, from the *Portfolio Demo*, and the *QUOTE_ADAPTER*, from the *Stock-List Demo* (see [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-StockList-adapter-java)). As a prerequisite, the full version of the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please follow the instructions in [Install the Portfolio Demo](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java#install-the-portfolio-demo) to install it.
 * Download this project.
-* Build a file to be named `lightstreamer_namespace.js` with the [online generator](http://www.lightstreamer.com/docs/client_javascript_tools/generator.html) and put it in the `src` folder of the project.<br>
-Be sure to include the LightstreamerClient, Subscription, ConnectionSharing, and StatusWidget modules and to use the "Use AMD with namespaced names" version.
+* Build a file to be named `lightstreamer_namespace.js` with the provided generator and put it in the `src` folder of the project;
+  see the build instructions on the [GitHub page](https://github.com/Lightstreamer/Lightstreamer-lib-client-javascript#building).
+  Be sure to include the LightstreamerClient, Subscription, ConnectionSharing, and StatusWidget modules and to use the "Use AMD with namespaced names" version.
 * Download the [Dojo Toolkit](http://download.dojotoolkit.org) and copy the `dojox` folder from the package to the `src` folder of the project. The demo requires the Dojo Toolkit v.1.8 or higher.
 * Using the [CommonJS Package Manager](https://github.com/kriszyp/cpm) install dgrid, dijit, and lightstreamer-store in the `src` folder of the project; dependencies for these packages will be automatically resolved by the cpm process:
     * `> cpm install dgrid 0.3.8`
