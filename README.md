@@ -4,7 +4,7 @@
 The *Portfolio Demo* simulates a portfolio management: it shows a list of stocks included in a portfolio and provide a simple order entry form.
 Changes to portfolio contents, as a result of new orders, are displayed on the page in real-time. In addition to that, the *Full Version of the Portfolio Demo* also shows, for each stock in the portfolio, the current price, updated in real-time from a market data feed.
 
-This project includes a web client front-end for the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java), showing the integration between the [Dojo Toolkit](http://download.dojotoolkit.org/) and the [Lightstreamer JavaScript Client](https://lightstreamer.com/api/ls-web-client/latest/index.html) library.
+This project includes a web client front-end for the [Lightstreamer - Portfolio Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Portfolio-adapter-java), showing the integration between the [Dojo Toolkit](http://download.dojotoolkit.org/) and the [Lightstreamer JavaScript Client](https://lightstreamer.com/docs/client_javascript_uni_api/index.html) library.
 
 ## Live Demo
 
@@ -16,7 +16,7 @@ This project includes a web client front-end for the [Lightstreamer - Portfolio 
 
 ## Details
 
-The demo shows how to use: the [Lightstreamer JavaScript Client](https://lightstreamer.com/api/ls-web-client/latest/index.html) library, the [Dojo Toolkit](http://download.dojotoolkit.org/), the [LightstreamerStore 1.0 for Dojo](https://github.com/Lightstreamer/dojo-lightstreamer-store) integration package, the [dgrid](https://github.com/SitePen/dgrid) widget library and the [DojoX Charts](https://github.com/dojo/dojox) library, together.
+The demo shows how to use: the [Lightstreamer JavaScript Client](https://lightstreamer.com/docs/client_javascript_uni_api/index.html) library, the [Dojo Toolkit](http://download.dojotoolkit.org/), the [LightstreamerStore 1.0 for Dojo](https://github.com/Lightstreamer/dojo-lightstreamer-store) integration package, the [dgrid](https://github.com/SitePen/dgrid) widget library and the [DojoX Charts](https://github.com/dojo/dojox) library, together.
 
 <!-- END DESCRIPTION lightstreamer-example-portfolio-client-dojo -->
 
@@ -35,9 +35,9 @@ If you want to install a version of this demo pointing to your local Lightstream
 * Launch Lightstreamer Server.
 * Download this project.
 * Create the folders `/pages/demos/[demo_name]` into your Lightstreamer server installation then copy here the content of `src` folder of this project.
-* Build a file to be named `lightstreamer_namespace.js` with the provided generator and put it in the `src` folder of the demo;
-  see the build instructions on the [GitHub page](https://github.com/Lightstreamer/Lightstreamer-lib-client-javascript#building).
-  Be sure to include the LightstreamerClient, Subscription, ConnectionSharing, and StatusWidget modules and to use the "Use AMD with namespaced names" version.
+* Get the `lightstreamer_namespace.js` file from [Lightstreamer distribution](http://www.lightstreamer.com/download) (see compatibility notes below) and put it in the `src` folder of the demo.
+  Alternatively, you can build a `lightstreamer_namespace.js` file from the [online generator](http://www.lightstreamer.com/docs/client_javascript_tools/generator.html).
+  In that case, be sure to include the LightstreamerClient, Subscription, ConnectionSharing, and StatusWidget modules and to use the "AMD with namespaced names" version.
 * Download [the Dojo Toolkit](http://download.dojotoolkit.org) and copy the `dojox` folder from the package to the `src` folder of the demo. The demo requires the Dojo Toolkit v.1.8 or higher.
 * Using the [CommonJS Package Manager](https://github.com/kriszyp/cpm) install dgrid, dijit and lightstreamer-store in the `src` folder; dependencies for these packages will be automatically resolved by the cpm process:
   - cpm install dgrid 0.3.8
@@ -121,5 +121,5 @@ As an example, to connect to a local server listening on port 8080 use:
 
 ## Lightstreamer Compatibility Notes 
 
-* Compatible with Lightstreamer JavaScript Client library version 6.0 or newer.
+* Compatible with Lightstreamer JavaScript Client library version 6.0 to 7.x.
 * Compatible with Dojo Toolkit v.1.8 or newer.
